@@ -11,6 +11,7 @@
   --font-poppins: var(--font-poppins);
   --font-sans: var(--font-poppins), system-ui, sans-serif;
   --breakpoint-xs: 23.4375rem;
+  --breakpoint-custom: 90rem;
 }
 
 @media (prefers-color-scheme: dark) {
