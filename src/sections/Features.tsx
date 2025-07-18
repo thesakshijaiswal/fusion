@@ -5,6 +5,7 @@ import Avatar from "@/components/Avatar";
 import Avatar1 from "@/assets/Images/user-1.png";
 import Avatar2 from "@/assets/Images/user-2.png";
 import Avatar3 from "@/assets/Images/user-3.png";
+import Key from "@/components/Key";
 const features = [
   "Asset Library",
   "Code Preview",
@@ -58,16 +59,28 @@ export default function Features() {
             title="Interactive Prototyping"
             description="Engage your client with prototypes that react to user actions."
           >
-            <div></div>
+            <div className="flex aspect-video items-center justify-center">
+              <p className="text-center text-4xl font-bold text-white/30">
+                We've achieved{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+                  incredible
+                </span>{" "}
+                growth this year
+              </p>
+            </div>
           </FeatureCard>
           <FeatureCard
             title="Keyboard Quick Actions"
             description="Powerful commands to help you create designs more quickly."
           >
-            <div></div>
+            <div className="flex aspect-video items-center justify-center gap-4">
+              <Key className="w-28">Shift</Key>
+              <Key>Alt</Key>
+              <Key>C</Key>
+            </div>
           </FeatureCard>
         </div>
-        <div>
+        <div className="mt-8">
           {features.map((feature) => (
             <div key={feature}>
               <span></span>
