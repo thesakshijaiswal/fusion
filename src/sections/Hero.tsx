@@ -5,7 +5,7 @@ import designExample1Image from "@/assets/Images/Design-Ex-1.png";
 import designExample2Image from "@/assets/Images/Design-Ex-2.png";
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center overflow-x-clip px-3 py-24">
+    <section className="flex items-center justify-center overflow-x-clip py-24">
       <div className="relative container">
         <div className="custom:block absolute top-16 -left-28 hidden">
           <Image
@@ -43,7 +43,7 @@ export default function Hero() {
           <input
             type="email"
             placeholder="Enter Your email"
-            className="bg-transparent px-4 outline-none md:flex-1 w-full"
+            className="w-full bg-transparent px-4 outline-none md:flex-1"
           />
           <Button
             type="submit"
