@@ -1,0 +1,72 @@
+import Tag from "@/components/Tag";
+
+const faqs = [
+  {
+    question: "How is Fusion different from other design tools?",
+    answer:
+      "Fusion combines visual design with real-time code generation, allowing teams to prototype, collaborate, and ship faster all in one unified workspace.",
+  },
+  {
+    question: "Is there a learning curve?",
+    answer:
+      "Fusion is built to be intuitive. Designers can start visually, while developers can dive into the generated code. Most users get comfortable within a few sessions.",
+  },
+  {
+    question: "How do you handle version control?",
+    answer:
+      "Every change in fusion is automatically saved, enabling to manage changes directly within the platform or sync with external repositories.",
+  },
+  {
+    question: "Can I work offline?",
+    answer:
+      "Yes, Fusion supports offline mode. You can continue designing and your work will sync automatically once you're back online.",
+  },
+  {
+    question: "How does Fusion handle collaboration?",
+    answer:
+      "Fusion enables real-time collaboration with multi-user editing, live comments, and role-based access making it easy for teams to stay aligned at every stage.",
+  },
+];
+
+export default function Faqs() {
+  return (
+    <section className="flex justify-center py-24">
+      <div className="container">
+        <div className="flex justify-center">
+          <Tag>FAQs</Tag>
+        </div>
+        <h2 className="mx-auto mt-6 max-w-xl text-center text-4xl font-medium sm:text-6xl">
+          Questions? We've got <span className="text-lime-400">answers</span>
+        </h2>
+        <div className="mt-12">
+          {faqs.map((faq) => (
+            <div
+              key={faq.question}
+              className="rounded-2xl border border-white/10 bg-neutral-800 p-6"
+            >
+              <div>
+                <h3>{faq.question}</h3>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-plus text-lime-400"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -50,7 +50,7 @@ export default function Integration() {
         <div className="grid items-center lg:grid-cols-2 lg:gap-16">
           <div>
             <Tag>Integrations</Tag>
-            <h2 className="mt-6 text-6xl font-medium">
+            <h2 className="mt-6 text-5xl font-medium sm:text-6xl">
               Plays well with <span className="text-lime-400">others</span>
             </h2>
             <p className="mt-4 text-lg text-white/50">
