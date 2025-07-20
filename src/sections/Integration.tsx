@@ -1,5 +1,4 @@
 import Tag from "@/components/Tag";
-import Image from "next/image";
 import IntegrationColumns from "@/components/IntegrationColumns";
 import figmaIcon from "@/assets/Images/figma-logo.png";
 import notionIcon from "@/assets/Images/notion-logo.png";
