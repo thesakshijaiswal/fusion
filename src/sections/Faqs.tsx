@@ -1,4 +1,5 @@
 import Tag from "@/components/Tag";
+import { twMerge } from "tailwind-merge";
 
 const faqs = [
   {
@@ -29,6 +30,7 @@ const faqs = [
 ];
 
 export default function Faqs() {
+  const selectedIndex = 0;
   return (
     <section className="flex justify-center py-24">
       <div className="container">
@@ -38,14 +40,14 @@ export default function Faqs() {
         <h2 className="mx-auto mt-6 max-w-xl text-center text-4xl font-medium sm:text-6xl">
           Questions? We've got <span className="text-lime-400">answers</span>
         </h2>
-        <div className="mt-12">
-          {faqs.map((faq) => (
+        <div className="mx-auto mt-12 flex max-w-xl flex-col gap-6 lg:max-w-2xl">
+          {faqs.map((faq, faqIndex) => (
             <div
               key={faq.question}
               className="rounded-2xl border border-white/10 bg-neutral-800 p-6"
             >
-              <div>
-                <h3>{faq.question}</h3>
+              <div className="flex items-center justify-between">
+                <h3 className="font-medium">{faq.question}</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -56,13 +58,23 @@ export default function Faqs() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="feather feather-plus text-lime-400"
+                  className={twMerge(
+                    "feather feather-plus flex-shrink-0 text-lime-400",
+                    selectedIndex === faqIndex && "rotate-45",
+                  )}
                 >
                   <line x1="12" y1="5" x2="12" y2="19"></line>
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
               </div>
-              <p>{faq.answer}</p>
+              <div
+                className={twMerge(
+                  "mt-6",
+                  selectedIndex !== faqIndex && "hidden",
+                )}
+              >
+                <p className="text-white/50">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
