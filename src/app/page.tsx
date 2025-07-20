@@ -5,6 +5,7 @@ import Introduction from "@/sections/Introduction";
 import Features from "@/sections/Features";
 import Integration from "@/sections/Integration";
 import Faqs from "@/sections/Faqs";
+import CallToAction from "@/sections/CallToAction.";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Features />
       <Integration />
       <Faqs />
+      <CallToAction />
     </>
   );
 }
