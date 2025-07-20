@@ -1,5 +1,6 @@
 import Tag from "@/components/Tag";
 import Image from "next/image";
+import IntegrationColumns from "@/components/IntegrationColumns";
 import figmaIcon from "@/assets/Images/figma-logo.png";
 import notionIcon from "@/assets/Images/notion-logo.png";
 import slackIcon from "@/assets/Images/slack-logo.png";
@@ -21,14 +22,12 @@ const integrations = [
   {
     name: "Slack",
     icon: slackIcon,
-    Description:
-      "Slack is a messaging platform for teams to collaborate and communicate in real time.",
+    Description: "Slack is a messaging platform for teams to collaborate.",
   },
   {
     name: "Relume",
     icon: relumeIcon,
-    Description:
-      "Relume helps you design and build websites faster with AI-powered wireframes and components.",
+    Description: "Relume helps you design and build websites faster.",
   },
   {
     name: "Framer",
@@ -42,6 +41,8 @@ const integrations = [
   },
 ];
 
+export type IntegrationsType = typeof integrations;
+
 export default function Integration() {
   return (
     <section className="flex justify-center overflow-hidden py-24">
@@ -54,16 +55,20 @@ export default function Integration() {
           Fusion seamlessly connects with your favourite tool, making it easy to
           plug into any workflow and collaborate across platforms.
         </p>
-        <div className="rounded-3xl border border-white/20 bg-neutral-800 p-6">
-          {integrations.map((integration) => (
-            <div key={integration.name}>
-              <div className="h-28 w-28 rounded-3xl bg-white p-4">
-                <Image src={integration.icon} alt={integration.name} />
-              </div>
-              <h3>{integration.name}</h3>
-              <p>{integration.Description}</p>
-            </div>
-          ))}
+        <div
+          className="mt-8 grid h-[400px] gap-4 overflow-hidden sm:grid-cols-2"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <IntegrationColumns integrations={integrations} />
+          <IntegrationColumns
+            integrations={integrations.slice().reverse()}
+            className="hidden sm:flex"
+          />
         </div>
       </div>
     </section>
