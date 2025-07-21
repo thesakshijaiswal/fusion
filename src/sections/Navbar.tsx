@@ -20,7 +20,11 @@ export default function Navbar() {
           <div className="hidden items-center justify-center lg:flex">
             <nav className="flex gap-6 font-medium">
               {navLinks.map((link) => (
-                <a href={link.href} key={link.label}>
+                <a
+                  href={link.href}
+                  key={link.label}
+                  className="hover:text-lime-400"
+                >
                   {link.label}
                 </a>
               ))}

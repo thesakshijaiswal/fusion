@@ -44,7 +44,10 @@ export type IntegrationsType = typeof integrations;
 
 export default function Integration() {
   return (
-    <section className="flex justify-center overflow-hidden py-24">
+    <section
+      className="flex justify-center overflow-hidden py-24"
+      id="integrations"
+    >
       <div className="container">
         <div className="grid items-center lg:grid-cols-2 lg:gap-16">
           <div>
