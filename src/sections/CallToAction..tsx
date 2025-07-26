@@ -1,6 +1,6 @@
 export default function CallToAction() {
   return (
-    <section className="flex justify-center py-24">
+    <section className="py-24">
       <div className="flex overflow-x-clip p-4">
         <div className="flex flex-none gap-16 text-7xl font-medium">
           {Array.from({ length: 10 }).map((_, i) => (
@@ -10,7 +10,6 @@ export default function CallToAction() {
             </div>
           ))}
         </div>
-        <p className="flex justify-center">Made with ❤️ by Sakshi Jaiswal</p>
       </div>
     </section>
   );
