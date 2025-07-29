@@ -1,15 +1,48 @@
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="#ffffff"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="feather feather-mouse-pointer size-5 text-white"
+    width="65"
+    height="45"
+    viewBox="0 0 70 40"
+    fill="none"
+    style="border-radius:5px"
 >
-    <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path>
-    <path d="M13 13l6 6"></path>
+
+    <g transform="translate(8, 2)">
+        <path
+            d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linejoin="round"
+        />
+        <path
+            d="M13 13l6 6"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+        />
+    </g>
+
+    <rect
+        x="30"
+        y="22"
+        width="104"
+        height="36"
+        rx="8"
+        fill="#8B5CF6"
+    />
+
+
+    <text
+        x="48"
+        y="34"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        font-weight="600"
+        fill="#ffffff"
+        text-anchor="middle"
+        dominant-baseline="middle"
+    >
+        you
+    </text>
 </svg>
