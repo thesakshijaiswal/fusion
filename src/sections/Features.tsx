@@ -1,3 +1,4 @@
+"use client";
 import Tag from "@/components/Tag";
 import FeatureCard from "@/components/FeatureCard";
 import Image from "next/image";
@@ -5,7 +6,10 @@ import Avatar from "@/components/Avatar";
 import Avatar1 from "@/assets/Images/user-1.png";
 import Avatar2 from "@/assets/Images/user-2.png";
 import Avatar3 from "@/assets/Images/user-3.png";
+import Avatar4 from "@/assets/Images/user-4.png";
 import Key from "@/components/Key";
+import { motion } from "framer-motion";
+
 const features = [
   "Asset Library",
   "Code Preview",
@@ -15,6 +19,42 @@ const features = [
   "Fast Search",
   "Smart Guides",
 ];
+
+function GradientText({
+  children,
+  className = "",
+  colors = ["#ffaa40", "#9c40ff", "#ffaa40"],
+  animationSpeed = 8,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  colors?: string[];
+  animationSpeed?: number;
+}) {
+  const gradientStyle = {
+    backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
+    backgroundSize: "300% 100%",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+  };
+
+  return (
+    <motion.span
+      className={`inline-block text-transparent ${className}`}
+      style={gradientStyle}
+      animate={{
+        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+      }}
+      transition={{
+        duration: animationSpeed,
+        repeat: Infinity,
+        ease: "linear",
+      }}
+    >
+      {children}
+    </motion.span>
+  );
+}
 
 export default function Features() {
   return (
@@ -30,7 +70,7 @@ export default function Features() {
           <FeatureCard
             title="Real-time Collaboration"
             description="Work together seamlessly with conflict-free team editing."
-            className="sm:col-span-2 lg:col-span-1"
+            className="group sm:col-span-2 lg:col-span-1"
           >
             <div className="flex aspect-video items-center justify-center">
               <Avatar className="z-40">
@@ -44,8 +84,13 @@ export default function Features() {
               <Avatar className="z-20 -ml-6 border-amber-500">
                 <Image src={Avatar3} alt="Avatar 3" />
               </Avatar>
-              <Avatar className="-ml-6 border-transparent">
-                <div className="inline-flex size-full items-center justify-center gap-1 rounded-full bg-neutral-700">
+              <Avatar className="-ml-6 border-transparent transition group-hover:border-emerald-500">
+                <div className="relative inline-flex size-full items-center justify-center gap-1 rounded-full bg-neutral-700">
+                  <Image
+                    src={Avatar4}
+                    alt="Avatar 4"
+                    className="absolute size-full rounded-full bg-neutral-900 opacity-0 transition group-hover:opacity-100"
+                  />
                   {Array.from({ length: 3 }).map((_, i) => (
                     <span
                       className="inline-flex size-1.5 rounded-full bg-white"
@@ -64,9 +109,12 @@ export default function Features() {
             <div className="flex aspect-video items-center justify-center">
               <p className="text-center text-4xl font-bold text-white/30">
                 We&apos;ve achieved{" "}
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+                <GradientText
+                  colors={["#ffaa40", "#9c40ff", "#ffaa40"]}
+                  animationSpeed={6}
+                >
                   incredible
-                </span>{" "}
+                </GradientText>{" "}
                 growth this year
               </p>
             </div>
@@ -76,10 +124,16 @@ export default function Features() {
             description="Powerful commands to help you create designs more quickly."
             className="sm:col-span-2 sm:col-start-2 lg:col-span-1 lg:col-start-auto"
           >
-            <div className="flex aspect-video items-center justify-center gap-4">
-              <Key className="w-28">Shift</Key>
-              <Key>Alt</Key>
-              <Key>C</Key>
+            <div className="group flex aspect-video items-center justify-center gap-4">
+              <Key className="w-28 outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
+                Shift
+              </Key>
+              <Key className="outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
+                Alt
+              </Key>
+              <Key className="outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
+                C
+              </Key>
             </div>
           </FeatureCard>
         </div>
