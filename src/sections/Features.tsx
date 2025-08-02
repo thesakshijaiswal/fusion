@@ -128,10 +128,10 @@ export default function Features() {
               <Key className="w-28 outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
                 Shift
               </Key>
-              <Key className="outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
+              <Key className="outline-offset-4 outline-transparent transition delay-150 group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
                 Alt
               </Key>
-              <Key className="outline-offset-4 outline-transparent transition group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
+              <Key className="outline-offset-4 outline-transparent transition delay-300 group-hover:translate-y-1 group-hover:outline-2 group-hover:outline-lime-400">
                 C
               </Key>
             </div>
@@ -141,9 +141,9 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature}
-              className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-neutral-700 px-3 py-1.5 md:px-5 md:py-2"
+              className="group inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-neutral-700 px-3 py-1.5 transition duration-500 hover:scale-105 md:px-5 md:py-2"
             >
-              <span className="inline-flex size-5 items-center justify-center rounded-full bg-lime-400 text-xl text-neutral-950">
+              <span className="inline-flex size-5 items-center justify-center rounded-full bg-lime-400 text-xl text-neutral-950 transition duration-500 group-hover:rotate-45">
                 &#10038;
               </span>
               <span className="font-medium md:text-lg">{feature}</span>
