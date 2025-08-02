@@ -5,7 +5,6 @@ import { twMerge } from "tailwind-merge";
 import { type IntegrationsType } from "@/sections/Integration";
 import { motion } from "motion/react";
 import { Fragment } from "react";
-import { reverse } from "dns";
 
 export default function IntegrationColumns(props: {
   integrations: IntegrationsType;
