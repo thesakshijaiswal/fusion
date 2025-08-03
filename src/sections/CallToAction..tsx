@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  animateValue,
-  AnimationPlaybackControls,
-  motion,
-  useAnimate,
-} from "motion/react";
+import { AnimationPlaybackControls, motion, useAnimate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 export default function CallToAction() {
