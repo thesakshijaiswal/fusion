@@ -19,7 +19,7 @@ export default function Footer() {
               {footerLinks.map((link) => (
                 <a
                   href={link.href}
-                  className="text-sm text-white/50"
+                  className="text-sm text-white/50 transition hover:text-lime-400"
                   key={link.label}
                 >
                   {link.label}
@@ -32,7 +32,7 @@ export default function Footer() {
           Made with ❤️ by{" "}
           <a
             href="https://www.linkedin.com/in/thesakshijaiswal"
-            className="pl-1.5 hover:text-lime-400"
+            className="pl-1.5 transition hover:text-lime-400"
           >
             Sakshi Jaiswal
           </a>
