@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fusion: Impactful Design, Created Effortlessly
 
-## Getting Started
+**Fusion** is a streamlined interface built to explore what modern product design can feel like clean, fast, and purpose-driven. Crafted with Next.js, TypeScript, Tailwind CSS, and Framer Motion, it focuses on delivering smooth interactions, thoughtful layouts, and a visual rhythm that resonates with **startup-grade user experiences**. It’s a hands-on exploration of building intuitive, high-impact UIs with real-world product thinking.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ⚡**Custom Multiplayer Cursor**  
+A Figma-inspired cursor that mimics the multiplayer editing experience, adding a modern, collaborative feel to the UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ✨**Animated Hero Cards with Drag & Drop**  
+Two hero section cards animate in from opposite directions on load and support drag-and-drop interactions for playful engagement.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ⚡**Infinite Scroll Animations**  
+Seamless infinite scrolling effects in both the Hero and CTA sections create a sense of momentum and modern motion design.
 
-## Learn More
+- ✨**Scroll-Reveal Introduction**  
+The introduction section features elegant text reveal animations triggered on scroll, powered entirely by Framer Motion.
 
-To learn more about Next.js, take a look at the following resources:
+- ⚡**Interactive Hover Effects**  
+The Features section showcases dynamic hover interactions including text gradients, reveal-on-hover transitions, keyboard-press simulations, and icon animations like rotate and scale.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✨**Bidirectional Infinite Scroll in Integrations**  
+Two opposing scroll animations one upward and one downward run continuously in the Integrations section, delivering visual depth and balance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ⚡**Smooth FAQ Drawer Animations**  
+Expandable FAQ drawers with smooth open-close transitions provide a refined and user-friendly reading experience.
 
-## Deploy on Vercel
+## 🧰 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48" alt="react"> | <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="next"> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"  width="48" height="48" alt="tailwindcss" /> | <img src="https://skillicons.dev/icons?i=javascript" width="48" height="48" alt="Javascript"> | <img src="https://skillicons.dev/icons?i=typescript" width="48" height="48" alt="vite"> | <img src="https://raw.githubusercontent.com/detain/svg-logos/b02ee1ac30c7ff4757278337c95588b01ed0954b/svg/f/framer-motion.svg" width="48" height="48"> |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **React** | **Next** | **Tailwind CSS** | **Javascript** | **TypeScript** | **Framer Motion** |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="48" height="48" alt="vite">|<img src="https://github.com/dcastil/tailwind-merge/raw/v3.3.1/assets/logo.svg" width="48" height="48" alt="tailwindmerge"> |<img src="https://camo.githubusercontent.com/04e1c9eeac89e2a758bbe60c01bf92332a45f7bac62c614aaed646f8fd58c19d/68747470733a2f2f70726574746965722e696f2f69636f6e2e706e67" width="48" height="48" alt="prettier"> |<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" width="48" height="48" alt="eslint">|
+|:---:|:---:|:---:|:---:|
+| **Vite** | **TW Merge** | **Prettier** | **EsLint** |
