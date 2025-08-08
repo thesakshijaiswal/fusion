@@ -17,10 +17,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <section className="fixed top-0 z-50 w-full py-4 lg:py-8">
-        <div className="container mx-auto max-w-5xl">
+      <section className="fixed top-0 z-50 w-full overflow-x-hidden py-4 lg:py-8">
+        <div className="container mx-auto max-w-5xl overflow-x-hidden px-4">
           <div className="rounded-[27px] border border-white/15 bg-neutral-950/70 backdrop-blur-xs md:rounded-full">
-            <div className="grid grid-cols-2 items-center p-2 px-4 md:pr-2 lg:grid-cols-3">
+            <div className="grid w-full grid-cols-2 items-center p-2 md:pr-2 lg:grid-cols-3">
               <div className="flex items-center gap-4">
                 <Image
                   src={LogoImage}

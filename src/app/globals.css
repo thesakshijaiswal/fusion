@@ -19,3 +19,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+html {
+  scroll-behavior: smooth;
+}
