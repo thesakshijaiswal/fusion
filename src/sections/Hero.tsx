@@ -6,7 +6,7 @@ import Pointer from "@/components/Pointer";
 import designExample1Image from "@/assets/Images/Design-Ex-1.png";
 import designExample2Image from "@/assets/Images/Design-Ex-2.png";
 import { motion, useAnimate } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import cursorYouImage from "@/assets/Images/cursor-you.svg";
 
 export default function Hero() {
@@ -14,6 +14,7 @@ export default function Hero() {
   const [leftPointerScope, leftPointerAnimate] = useAnimate();
   const [rightDesignScope, rightDesignAnimate] = useAnimate();
   const [rightPointerScope, rightPointerAnimate] = useAnimate();
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     leftDesignAnimate([
@@ -53,7 +54,8 @@ export default function Hero() {
 
   return (
     <section
-      className="flex items-center justify-center overflow-x-clip py-24"
+      ref={heroRef}
+      className="relative flex items-center justify-center overflow-x-clip py-24 lg:py-40"
       style={{ cursor: `url(${cursorYouImage.src}), auto` }}
     >
       <div className="relative container">
@@ -61,6 +63,7 @@ export default function Hero() {
           ref={leftDesignScope}
           initial={{ opacity: 0, y: 100, x: -100 }}
           drag
+          dragConstraints={heroRef}
           className="custom:block absolute top-16 -left-28 hidden"
         >
           <Image
@@ -70,6 +73,7 @@ export default function Hero() {
             draggable="false"
           />
         </motion.div>
+
         <motion.div
           ref={leftPointerScope}
           initial={{ opacity: 0, y: 100, x: -200 }}
@@ -77,10 +81,12 @@ export default function Hero() {
         >
           <Pointer name="Leonardo" />
         </motion.div>
+
         <motion.div
           ref={rightDesignScope}
           initial={{ opacity: 0, x: 100, y: 100 }}
           drag
+          dragConstraints={heroRef}
           className="custom:block absolute -top-16 -right-28 hidden"
         >
           <Image
@@ -90,6 +96,7 @@ export default function Hero() {
             draggable="false"
           />
         </motion.div>
+
         <motion.div
           ref={rightPointerScope}
           initial={{ opacity: 0, x: 275, y: 100 }}
@@ -97,18 +104,22 @@ export default function Hero() {
         >
           <Pointer name="Sakshi" color="blue" />
         </motion.div>
+
         <div className="flex justify-center">
           <div className="inline-flex rounded-full bg-gradient-to-r from-purple-400 to-pink-400 px-3 py-1 font-semibold text-neutral-950">
             ✨ $7.5M Seed round raised
           </div>
         </div>
+
         <h1 className="mx-auto mt-6 max-w-5xl text-center text-6xl font-medium md:text-7xl lg:text-8xl">
           Impactful Design, Created effortlessly
         </h1>
+
         <p className="mx-auto mt-8 max-w-2xl text-center text-xl text-white/50">
           Design without distractions. Fusion blends power and simplicity,
           helping you stay focused, fast, and fully in flow.
         </p>
+
         <form className="mx-auto mt-8 flex max-w-lg rounded-full border border-white/15 p-2">
           <input
             type="email"
