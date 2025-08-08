@@ -24,23 +24,25 @@ export default function CallToAction() {
       }
     }
   }, [isHovered]);
+
+  const items = Array.from({ length: 10 }).map((_, i) => (
+    <div key={i} className="flex items-center gap-16">
+      <span className="text-lime-400">&#10038;</span>
+      <span className="group-hover:text-lime-400">Try it for free</span>
+    </div>
+  ));
+
   return (
     <section className="py-24">
       <div className="flex overflow-x-clip p-4">
         <motion.div
           ref={scope}
-          animate={{ x: "-50%" }}
-          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
           className="group flex flex-none cursor-pointer gap-16 pr-16 text-7xl font-medium"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {Array.from({ length: 10 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-16">
-              <span className="text-lime-400">&#10038;</span>
-              <span className="group-hover:text-lime-400">Try it for free</span>
-            </div>
-          ))}
+          {items}
+          {items}
         </motion.div>
       </div>
     </section>
